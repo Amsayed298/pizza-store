@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مطعم بيتزا كراف - PizzaCrave</title>
+    <!-- ربط ملف التنسيق الاستايل الصحيح -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. الهيدر وشريط التنقل -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">🍕 PizzaCrave</div>
+            <nav>
+                <a href="#home">الرئيسية</a>
+                <a href="#menu">القائمة</a>
+                <a href="#about">من نحن</a>
+                <a href="#contact">اتصل بنا</a>
+                <!-- أيقونة السلة والعداد الجديد -->
+                <div class="cart-icon-container">
+                    <span id="cartIcon">🛒 <span id="cartCount">0</span></span>
+                </div>
+                <button id="themeToggle">🌙</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 2. قسم الواجهة الرئيسي -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-text">
+                <h1>بيتزا ساخنة وطازجة <br><span id="typing-text"></span><span class="cursor">|</span></h1>
+                <p>مصنوعة بنسبة 100% من مكونات طازجة ومخبوزة في فرن حطب تقليدي شهي.</p>
+                <a href="#menu" class="cta-btn">تصفح المنيو</a>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero-pizza.png.jpg" alt="بيتزا شهية" class="main-pizza-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. قسم قائمة الطعام -->
+    <section class="menu-section" id="menu">
+        <div class="container">
+            <h2>أشهر أنواع البيتزا لدينا 🍕</h2>
+            <div class="menu-grid">
+                <!-- الوجبة الأولى -->
+                <div class="menu-card">
+                    <img src="images/pizza2.jpg.jpg" alt="مارغريتا">
+                    <h3>بيتزا مارغريتا</h3>
+                    <p>صلصة طماطم غنية، جبنة موزاريللا طبيعية، وريحان طازج.</p>
+                    <div class="card-footer">
+                        <span class="price">250 L.E</span>
+                        <button class="order-item-btn">أضف للسلة</button>
+                    </div>
+                </div>
+                <!-- الوجبة الثانية -->
+                <div class="menu-card">
+                    <img src="images/pizza3.jpg.jpg" alt="بيبروني">
+                    <h3>بيتزا بيبروني</h3>
+                    <p>شرائح البيبروني البقري المقرمشة مع طبقات مضاعفة من الجبن.</p>
+                    <div class="card-footer">
+                        <span class="price">350 L.E</span>
+                        <button class="order-item-btn">أضف للسلة</button>
+                    </div>
+                </div>
+                <!-- الوجبة الثالثة -->
+                <div class="menu-card">
+                    <img src="images/pizza5.jpg.jpg" alt="خضار">
+                    <h3>بيتزا الخضار المشكل</h3>
+                    <p>فلفل ألوان، زيتون أسود, فطر طازج، وبصل مكرمل.</p>
+                    <div class="card-footer">
+                        <span class="price">300 L.E</span>
+                        <button class="order-item-btn">أضف للسلة</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. قسم اتصل بنا ومواعيد العمل -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2>تواصل معنا ومواعيد العمل 📞</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>أوقات العمل</h3>
+                    <p>🕒 يومياً من الساعة 12:00 ظهراً وحتى 12:00 منتصف الليل.</p>
+                    <p>🛵 خدمة التوصيل متوفرة على مدار الساعة.</p>
+                </div>
+                <div class="contact-info">
+                    <h3>العنوان والهاتف</h3>
+                    <p>📍 Compound Rehab October City</p>
+                    <p>📞 رقم الهاتف:  00201555200249/00201063370866</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 5. قسم من نحن -->
+    <section class="about-section" id="about">
+        <div class="container about-container">
+            <div class="about-text">
+                <h2>قصتنا وسر صنعتنا 🍕</h2>
+                <p>في <strong>PizzaCrave</strong>، لسنا مجرد مطعم بيتزا تقليدي. نحن نعيش الشغف في كل عجينة نفردها، ونختار مكوناتنا بعناية فائقة بنسبة 100% طازجة وعضوية.</p>
+                <p>نخبز البيتزا داخل أفران حطب تقليدية على درجات حرارة عالية تمنح الأطراف قرمشة مثالية والجبن ذوباناً لا يقاوم لنقدم لك الطعم الإيطالي الأصيل في قلب أكتوبر.</p>
+            </div>
+            <div class="about-features">
+                <div class="feature-item">🔥 خبز طازج بفرن الحطب</div>
+                <div class="feature-item">🌿 مكونات عضوية 100%</div>
+                <div class="feature-item">🛵 توصيل سريع وساخن</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. التذييل (Footer) -->
+    <footer>
+        <div class="container footer-container">
+            <p>جميع الحقوق محفوظة © 2026 | مطعم بيتزا كراف - PizzaCrave</p>
+            <div class="footer-links">
+                <a href="#home">الرئيسية</a>
+                <a href="#menu">المنيو</a>
+                <a href="#about">من نحن</a>
+                <a href="#contact">اتصل بنا</a>
+            </div>
+        </div>
+    </footer>
+    <!-- نافذة السلة المنبثقة (Cart Pop-up) -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-modal-content">
+            <span class="close-modal" id="closeCart">&times;</span>
+            <h2>🛒 سلة المشتريات</h2>
+            <div id="cartItemsList" class="cart-items-list">
+                <!-- هنا ستظهر الوجبات المضافة تلقائياً عبر الجافاسكريبت -->
+                <p class="empty-cart-msg">السلة فارغة حالياً 🍕</p>
+            </div>
+            <div class="cart-modal-footer">
+                <div class="cart-total-display">
+                    <strong>الإجمالي:</strong> <span id="popupTotal">0.00</span> جنيه مصري
+                </div>
+                <button class="checkout-btn" onclick="alert('تم تحويلك لصفحة الدفع وتأكيد الطلب! 🎉')">تأكيد الطلب</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ربط ملف الجافاسكريبت التفاعلي -->
+    <script src="script.js"></script>
+</body>
+</html>
