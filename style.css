@@ -574,3 +574,65 @@ body.dark-mode footer {
     background-color: var(--secondary-color);
     transform: translateY(-2px);
 }
+/* ========================================================
+   تنسيقات خاصة بالشاشات الأصغر من 768 بكسل (الموبايل) 
+=========================================================== */
+@media (max-width: 768px) {
+  
+  /* 1. ضبط حاوية التنقل لجعل العناصر مرنة عمودياً */
+  .nav-container {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px; 
+    padding: 15px 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* 2. ضبط روابط التنقل والأيقونات لتتوسط الشاشة */
+  nav {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  /* 3. تكبير حجم أزرار الروابط لتناسب لمس الشاشة باليد */
+  nav a {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+
+  /* 4. ضبط أيقونة السلة وزر الثيم */
+  .cart-icon-container, #themeToggle {
+    margin-top: 5px;
+  }
+
+  /* 5. ضبط قسم الواجهة الرئيسية (Hero Section) */
+  .hero-container {
+    flex-direction: column-reverse; 
+    text-align: center; 
+    padding: 40px 20px;
+  }
+
+  /* 6. تصغير حجم الخطوط الكبيرة لتناسب أبعاد الشاشة الصغيرة */
+  .hero-text h1 {
+    font-size: 28px; 
+    line-height: 1.3;
+  }
+
+  .hero-text p {
+    font-size: 16px; 
+    margin: 15px 0;
+  }
+
+  /* 7. ضبط زر الدعوة للإجراء (Call to Action) */
+  .cta-btn {
+    display: inline-block;
+    width: 100%; 
+    max-width: 200px;
+    padding: 12px;
+  }
+
+} /* هاد القوس الأخير والضروري لإغلاق الـ media query */
