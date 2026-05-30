@@ -9,23 +9,35 @@
 </head>
 <body>
 
-    <!-- 1. الهيدر وشريط التنقل -->
-    <header>
+       <header>
         <div class="container nav-container">
             <div class="logo">🍕 PizzaCrave</div>
-            <nav>
-                <a href="#home">الرئيسية</a>
-                <a href="#menu">القائمة</a>
-                <a href="#about">من نحن</a>
-                <a href="#contact">اتصل بنا</a>
-                <!-- أيقونة السلة والعداد الجديد -->
+            
+            <!-- أزرار التحكم الجانبية وأيقونة السلة (تظل ظاهرة دائماً) -->
+            <div class="nav-controls">
                 <div class="cart-icon-container">
                     <span id="cartIcon">🛒 <span id="cartCount">0</span></span>
                 </div>
                 <button id="themeToggle">🌙</button>
+                
+                <!-- زر قائمة الموبايل الثلاث أسطر -->
+                <button id="menuToggle" class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <!-- قائمة الروابط التي ستختفي وتظهر على الموبايل -->
+            <nav id="navMenu">
+                <a href="#home">الرئيسية</a>
+                <a href="#menu">القائمة</a>
+                <a href="#about">من نحن</a>
+                <a href="#contact">اتصل بنا</a>
             </nav>
         </div>
     </header>
+
 
     <!-- 2. قسم الواجهة الرئيسي -->
     <section class="hero" id="home">

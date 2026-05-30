@@ -578,61 +578,67 @@ body.dark-mode footer {
    تنسيقات خاصة بالشاشات الأصغر من 768 بكسل (الموبايل) 
 =========================================================== */
 @media (max-width: 768px) {
-  
-  /* 1. ضبط حاوية التنقل لجعل العناصر مرنة عمودياً */
+  /* ضبط الهيدر ليصبح الشعار في طرف والأزرار في الطرف الآخر */
   .nav-container {
     display: flex;
-    flex-direction: column; 
-    gap: 15px; 
-    padding: 15px 10px;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
-  }
-
-  /* 2. ضبط روابط التنقل والأيقونات لتتوسط الشاشة */
-  nav {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    gap: 12px;
+    padding: 10px 20px;
+    position: relative;
     width: 100%;
   }
 
-  /* 3. تكبير حجم أزرار الروابط لتناسب لمس الشاشة باليد */
+  /* تجميع السلة وزر الثيم وزر القائمة بجانب بعضهم */
+  .nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  /* تصميم زر الهامبرغر المكون من 3 أسطر */
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color, #333); /* يتماشى مع لون النص لديك */
+    transition: 0.3s;
+  }
+
+  /* تحويل قائمة الروابط إلى قائمة منسدلة مخفية */
+  nav {
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-color, #ffffff); /* لون خلفية يتناسب مع الثيم */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 15px 0;
+    gap: 10px;
+    z-index: 1000;
+  }
+
+  /* كلاس لتشغيل القائمة وإظهارها عند الضغط */
+  nav.active {
+    display: flex !important;
+  }
+
   nav a {
-    font-size: 16px;
-    padding: 8px 12px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
   }
-
-  /* 4. ضبط أيقونة السلة وزر الثيم */
-  .cart-icon-container, #themeToggle {
-    margin-top: 5px;
-  }
-
-  /* 5. ضبط قسم الواجهة الرئيسية (Hero Section) */
-  .hero-container {
-    flex-direction: column-reverse; 
-    text-align: center; 
-    padding: 40px 20px;
-  }
-
-  /* 6. تصغير حجم الخطوط الكبيرة لتناسب أبعاد الشاشة الصغيرة */
-  .hero-text h1 {
-    font-size: 28px; 
-    line-height: 1.3;
-  }
-
-  .hero-text p {
-    font-size: 16px; 
-    margin: 15px 0;
-  }
-
-  /* 7. ضبط زر الدعوة للإجراء (Call to Action) */
-  .cta-btn {
-    display: inline-block;
-    width: 100%; 
-    max-width: 200px;
-    padding: 12px;
-  }
-
-} /* هاد القوس الأخير والضروري لإغلاق الـ media query */
+}

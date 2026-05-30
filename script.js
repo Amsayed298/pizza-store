@@ -172,3 +172,20 @@ function updateCartPopupUI() {
         });
     }
 }
+// كود إظهار وإخفاء قائمة الموبايل
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+
+if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+    
+    // إغلاق القائمة تلقائياً عند الضغط على أي رابط
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+        });
+    });
+}
+
