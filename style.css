@@ -603,6 +603,23 @@ nav {
 .menu-toggle {
   display: none;
 }
+/* تنسيق زر تبديل اللغة الأساسي */
+#langToggle {
+  background: none;
+  border: 1px solid var(--text-color, #333);
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  color: var(--text-color, #333);
+  transition: 0.3s;
+}
+
+#langToggle:hover {
+  background-color: var(--text-color, #333);
+  color: var(--bg-color, #fff);
+}
 
 /* ========================================================
    تنسيقات خاصة بالشاشات الأصغر من 768 بكسل (الموبايل) 

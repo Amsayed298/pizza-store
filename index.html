@@ -8,19 +8,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-       <header>
+    <header>
         <div class="container nav-container">
             <div class="logo">🍕 PizzaCrave</div>
             
-            <!-- أزرار التحكم الجانبية وأيقونة السلة (تظل ظاهرة دائماً) -->
+            <!-- أزرار التحكم الجانبية: السلة، الثيم، وزر اللغة الجديد -->
             <div class="nav-controls">
                 <div class="cart-icon-container">
                     <span id="cartIcon">🛒 <span id="cartCount">0</span></span>
                 </div>
                 <button id="themeToggle">🌙</button>
                 
-                <!-- زر قائمة الموبايل الثلاث أسطر -->
+                <!-- زر تبديل اللغة الجديد في مكانه الصحيح -->
+                <button id="langToggle" data-lang="ar">EN</button>
+                
+                <!-- زر قائمة الموبايل الهامبرغر -->
                 <button id="menuToggle" class="menu-toggle">
                     <span></span>
                     <span></span>
@@ -28,17 +30,15 @@
                 </button>
             </div>
 
-            <!-- قائمة الروابط التي ستختفي وتظهر على الموبايل -->
+            <!-- قائمة الروابط المعرفة بـ IDs للترجمة -->
             <nav id="navMenu">
-                <a href="#home">الرئيسية</a>
-                <a href="#menu">القائمة</a>
-                <a href="#about">من نحن</a>
-                <a href="#contact">اتصل بنا</a>
+                <a href="#home" id="navHome">الرئيسية</a>
+                <a href="#menu" id="navMenuBtn">القائمة</a>
+                <a href="#about" id="navAbout">من نحن</a>
+                <a href="#contact" id="navContact">اتصل بنا</a>
             </nav>
         </div>
     </header>
-
-
     <!-- 2. قسم الواجهة الرئيسي -->
     <section class="hero" id="home">
         <div class="container hero-container">

@@ -188,4 +188,50 @@ if (menuToggle && navMenu) {
         });
     });
 }
+// قاموس النصوص الكامل للترجمة بين العربي والإنجليزي
+const translations = {
+  ar: {
+    navHome: "الرئيسية",
+    navMenuBtn: "القائمة",
+    navAbout: "من نحن",
+    navContact: "اتصل بنا",
+    heroTitle: "بيتزا ساخنة وطازجة <br><span id='typing-text'></span><span class='cursor'>|</span>",
+    heroDesc: "مصنوعة بنسبة 100% من مكونات طازجة ومخبوزة في فرن حطب تقليدي شهي.",
+    heroCta: "تصفح المنيو"
+  },
+  en: {
+    navHome: "Home",
+    navMenuBtn: "Menu",
+    navAbout: "About Us",
+    navContact: "Contact Us",
+    heroTitle: "Hot & Fresh Pizza <br><span id='typing-text'></span><span class='cursor'>|</span>",
+    heroDesc: "Made 100% from fresh ingredients and baked in a delicious traditional wood oven.",
+    heroCta: "Browse Menu"
+  }
+};
 
+const langToggle = document.getElementById('langToggle');
+
+if (langToggle) {
+  langToggle.addEventListener('click', () => {
+    // التحقق من اللغة الحالية وتبديلها
+    const currentLang = langToggle.getAttribute('data-lang');
+    const newLang = currentLang === 'ar' ? 'en' : 'ar';
+    
+    // تحديث خصائص الزر ونص العرض
+    langToggle.setAttribute('data-lang', newLang);
+    langToggle.innerText = newLang === 'ar' ? 'EN' : 'AR';
+    
+    // تغيير اتجاه ولغة الصفحة بالكامل
+    document.documentElement.lang = newLang;
+    document.documentElement.dir = newLang === 'ar' ? 'rtl' : 'ltr';
+    
+    // تبديل نصوص العناصر بناءً على القاموس
+    Object.keys(translations[newLang]).forEach(id => {
+      const element = document.getElementById(id);
+      if (element) {
+        element.innerHTML = translations[newLang][id];
+      }
+    });
+  });
+}
