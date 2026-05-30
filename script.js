@@ -188,14 +188,13 @@ if (menuToggle && navMenu) {
         });
     });
 }
-// قاموس النصوص الكامل للترجمة بين العربي والإنجليزي
+// 1. تعريف قاموس النصوص أولاً في الأعلى
 const translations = {
   ar: {
     navHome: "الرئيسية",
     navMenuBtn: "القائمة",
     navAbout: "من نحن",
     navContact: "اتصل بنا",
-    heroTitle: "بيتزا ساخنة وطازجة <br><span id='typing-text'></span><span class='cursor'>|</span>",
     heroDesc: "مصنوعة بنسبة 100% من مكونات طازجة ومخبوزة في فرن حطب تقليدي شهي.",
     heroCta: "تصفح المنيو"
   },
@@ -204,12 +203,12 @@ const translations = {
     navMenuBtn: "Menu",
     navAbout: "About Us",
     navContact: "Contact Us",
-    heroTitle: "Hot & Fresh Pizza <br><span id='typing-text'></span><span class='cursor'>|</span>",
     heroDesc: "Made 100% from fresh ingredients and baked in a delicious traditional wood oven.",
     heroCta: "Browse Menu"
   }
 };
 
+// 2. كود تشغيل زر تبديل اللغة بالأسفل ليتمكن من قراءة القاموس
 const langToggle = document.getElementById('langToggle');
 
 if (langToggle) {
@@ -230,8 +229,18 @@ if (langToggle) {
     Object.keys(translations[newLang]).forEach(id => {
       const element = document.getElementById(id);
       if (element) {
-        element.innerHTML = translations[newLang][id];
+        element.innerText = translations[newLang][id];
       }
     });
+
+    // ترجمة العنوان الرئيسي الذكي دون التأثير على كود الكتابة التلقائية
+    const heroTitle = document.getElementById('heroTitle');
+    if (heroTitle && heroTitle.firstChild) {
+      if (newLang === 'en') {
+        heroTitle.firstChild.textContent = "Hot & Fresh Pizza ";
+      } else {
+        heroTitle.firstChild.textContent = "بيتزا ساخنة وطازجة ";
+      }
+    }
   });
 }
